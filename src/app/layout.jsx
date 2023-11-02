@@ -25,6 +25,14 @@ const navItems = [
   'Записаться',
 ];
 
+const WIDE_AREA_PARAMS = {
+  xs: 0,
+  sm: 5,
+  md: 10,
+  lg: 20,
+  xl: 30,
+}
+
 export default function RootLayout(props) {
   // const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -61,7 +69,7 @@ export default function RootLayout(props) {
             component="nav"
             sx={{
               // backgroundColor: 'transparent',
-              px: { sm: 30 },
+              px: WIDE_AREA_PARAMS,
             }}
           >
             <Toolbar>
@@ -115,6 +123,7 @@ export default function RootLayout(props) {
               bgcolor: 'background.default',
               mt: ['48px', '56px', '64px'],
               p: 3,
+              mx: WIDE_AREA_PARAMS
             }}
           >
             {props.children}
