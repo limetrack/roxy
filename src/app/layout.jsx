@@ -31,7 +31,7 @@ const WIDE_AREA_PARAMS = {
   md: 10,
   lg: 20,
   xl: 30,
-}
+};
 
 export default function RootLayout(props) {
   // const { window } = props;
@@ -123,7 +123,7 @@ export default function RootLayout(props) {
               bgcolor: 'background.default',
               mt: ['48px', '56px', '64px'],
               p: 3,
-              mx: WIDE_AREA_PARAMS
+              mx: WIDE_AREA_PARAMS,
             }}
           >
             {props.children}
