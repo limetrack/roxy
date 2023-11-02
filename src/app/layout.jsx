@@ -68,7 +68,7 @@ export default function RootLayout(props) {
           <AppBar
             component="nav"
             sx={{
-              // backgroundColor: 'transparent',
+              backgroundColor: 'transparent',
               px: WIDE_AREA_PARAMS,
             }}
           >
@@ -121,9 +121,9 @@ export default function RootLayout(props) {
             sx={{
               flexGrow: 1,
               bgcolor: 'background.default',
-              mt: ['48px', '56px', '64px'],
-              p: 3,
-              mx: WIDE_AREA_PARAMS,
+              // mt: ['48px', '56px', '64px'],
+              // p: 3,
+              // mx: WIDE_AREA_PARAMS,
             }}
           >
             {props.children}
