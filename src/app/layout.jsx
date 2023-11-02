@@ -85,13 +85,13 @@ export default function RootLayout(props) {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', color: 'initial' } }}
               >
                 ROXY
               </Typography>
               <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
-                  <Button key={item} sx={{ color: '#fff' }}>
+                  <Button key={item} sx={{ color: 'initial' }}>
                     {item}
                   </Button>
                 ))}

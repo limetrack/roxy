@@ -24,24 +24,24 @@ export default function HomePage() {
           px: WIDE_AREA_PARAMS,
           minWidth: '100%',
           height: '100vh',
-          backgroundImage: 'url(/photo1.jpg)',
-          backgroundPosition: 'top',
+          backgroundImage: 'url(/IMG_4891.JPG)',
+          backgroundPosition: 'right',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
         }}
       >
         <Grid xs={12}>
-          <Typography variant="h5" sx={{ ml: 0.9, mt: 20, textTransform: 'uppercase' }} color="white">
+          <Typography variant="h5" sx={{ ml: 0.9, mt: 20, textTransform: 'uppercase' }}>
             Психологические консультации онлайн
           </Typography>
-          <Typography variant="h1" sx={{ mt: 0, textTransform: 'uppercase' }} color="white">
+          <Typography variant="h1" sx={{ mt: 0, textTransform: 'uppercase' }}>
             Роксолана
           </Typography>
-          <Typography variant="h1" sx={{ ml: 13, mt: 2, textTransform: 'uppercase' }} color="white">
+          <Typography variant="h1" sx={{ ml: 13, mt: 2, textTransform: 'uppercase' }}>
             Микитин
           </Typography>
           <Box sx={{
-            maxWidth: '560px', backgroundColor: 'white', p: 2, mt: 8, borderRadius: '6px', opacity: 0.9,
+            maxWidth: '560px', backgroundColor: 'transparent', p: 2, mt: 8, borderRadius: '6px', opacity: 0.9,
           }}
           >
             <Stack direction="row" justifyContent="center" alignItems="center">
@@ -49,7 +49,7 @@ export default function HomePage() {
                 minWidth: '100px',
                 height: '100px',
                 backgroundImage: 'url(/IMG_5497.JPG)',
-                backgroundPosition: 'top',
+                backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 borderRadius: '50%',
