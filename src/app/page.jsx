@@ -9,7 +9,7 @@ const WIDE_AREA_PARAMS = {
   sm: 5,
   md: 10,
   lg: 20,
-  xl: 30,
+  xl: 40,
 };
 
 export default function HomePage() {
