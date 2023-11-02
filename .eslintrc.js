@@ -31,7 +31,6 @@ module.exports = {
       'warn',
       { allowAsProps: true },
     ],
-    'no-inline-styles/no-inline-styles': 2,
     'import/no-anonymous-default-export': 0,
     'react/display-name': 0,
   },

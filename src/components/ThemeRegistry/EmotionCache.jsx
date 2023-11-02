@@ -1,4 +1,5 @@
 'use client';
+
 import * as React from 'react';
 import createCache from '@emotion/cache';
 import { useServerInsertedHTML } from 'next/navigation';
@@ -6,6 +7,7 @@ import { CacheProvider as DefaultCacheProvider } from '@emotion/react';
 
 // Adapted from https://github.com/garronej/tss-react/blob/main/src/next/appDir.tsx
 export default function NextAppDirEmotionCacheProvider(props) {
+  // eslint-disable-next-line react/destructuring-assignment
   const { options, CacheProvider = DefaultCacheProvider, children } = props;
 
   const [registry] = React.useState(() => {
@@ -55,7 +57,7 @@ export default function NextAppDirEmotionCacheProvider(props) {
     });
 
     return (
-      <React.Fragment>
+      <>
         {globals.map(({ name, style }) => (
           <style
             key={name}
@@ -71,7 +73,7 @@ export default function NextAppDirEmotionCacheProvider(props) {
             dangerouslySetInnerHTML={{ __html: styles }}
           />
         )}
-      </React.Fragment>
+      </>
     );
   });
 
