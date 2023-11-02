@@ -48,7 +48,7 @@ export default function HomePage() {
               <Box sx={{
                 minWidth: '100px',
                 height: '100px',
-                backgroundImage: 'url(/photo2.jpg)',
+                backgroundImage: 'url(/IMG_5497.JPG)',
                 backgroundPosition: 'top',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
