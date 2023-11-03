@@ -21,6 +21,28 @@ const expirience = [
 
 const BORDER_COLOR = '#696969';
 
+const cases = [
+  'Обида, ревность, кризис/тупик в отношениях',
+  'Проблемы из семьи, детско-родительские отношения',
+  'Стыд, сравнение себя с другими, неуверенность',
+  'Любовный треугольник, интерес к занятым партерам',
+  'Я ненужна / незначима / Я «сама» / я одна',
+  'Чувство вины, неумение отказывать, личные границы',
+  'Эмоциональная и любовная зависимость',
+  'Нарушения пищевого поведения (РПП)',
+  'Тревожность, раздражительность, навязчивые мысли, скучно',
+  'Самореализация, карьера / не знаю чего хочу / выбор предназначения и дела жизни',
+  'Обесценивание себя, критика, хроническое недовольство собой или другими / вижу в себе только недостатки',
+  'Страх чужих оценок и мнений / не соответствовать ожиданиям / что ничего не получится',
+];
+
+const negativeCases = [
+  'Депрессия',
+  'Алкоголизм',
+  'Игромания',
+  'Наркомания',
+];
+
 export default function HomePage() {
   return (
     <Box>
@@ -121,7 +143,7 @@ export default function HomePage() {
           px: WIDE_AREA_PARAMS,
           minWidth: '100%',
           height: '800px',
-          borderBottom: `1px solid ${BORDER_COLOR}`,
+          // borderBottom: `1px solid ${BORDER_COLOR}`,
           // background: 'rgb(238,238,238)',
           background: 'linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(221,221,221,0.9150253851540616) 17%, rgba(255,255,255,1) 100%)',
         }}
@@ -159,6 +181,84 @@ export default function HomePage() {
               Ключ к счастью, спокойствию и уверенности лежит через знания и понимание себя, что про вас, а где иллюзия.
               Избавляясь от балласта чужих ожиданий, вы выходите на новый уровень отношений с собой и начинаете руководить
               реальностью, а не подчиняться обстоятельствам.
+            </Typography>
+          </Stack>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        rowSpacing={0}
+        columnSpacing={0}
+        justifyContent="center"
+        sx={{
+          px: WIDE_AREA_PARAMS,
+          py: 16,
+          minWidth: '100%',
+          // height: '800px',
+          // borderBottom: `1px solid ${BORDER_COLOR}`,
+          // background: 'rgb(238,238,238)',
+          // background: 'linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(221,221,221,0.9150253851540616) 17%, rgba(255,255,255,1) 100%)',
+        }}
+      >
+        <Grid container xs={12} justifyContent="center" alignItems="center">
+          <Stack spacing={4} direction="column" justifyContent="flex-start" alignItems="center">
+            <Typography variant="h2" textAlign="center" sx={{ width: '100%', pb: 4 }}>
+              С чем я работаю
+            </Typography>
+            <Grid container rowSpacing={2}>
+              {cases.map((text) => (
+                <Grid key={text} xs={6} spacing={8}>
+                  <Stack direction="row">
+                    <Typography variant="h6" textAlign="left">
+                      •
+                    </Typography>
+                    <Typography variant="h6" textAlign="left" sx={{ ml: 2 }}>
+                      {text}
+                    </Typography>
+                  </Stack>
+                </Grid>
+              ))}
+            </Grid>
+          </Stack>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        rowSpacing={0}
+        columnSpacing={0}
+        justifyContent="center"
+        sx={{
+          px: WIDE_AREA_PARAMS,
+          py: 16,
+          minWidth: '100%',
+          // height: '800px',
+          // borderBottom: `1px solid ${BORDER_COLOR}`,
+          // background: 'rgb(238,238,238)',
+          background: 'linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(221,221,221,0.9150253851540616) 17%, rgba(255,255,255,1) 100%)',
+        }}
+      >
+        <Grid container xs={12} justifyContent="center" alignItems="center">
+          <Stack spacing={4} direction="column" justifyContent="flex-start" alignItems="center">
+            <Typography variant="h2" textAlign="center" sx={{ width: '100%', pb: 8 }}>
+              Запросы, с которыми я не работаю
+            </Typography>
+            <Grid container rowSpacing={2}>
+              {negativeCases.map((text) => (
+                <Grid key={text} xs={3} alignItems="center" justifyContent="center">
+                  <Stack direction="row" sx={{ mx: 4 }}>
+                    {/* <Typography variant="h6" textAlign="left">
+                      •
+                    </Typography> */}
+                    <Typography variant="h6" textAlign="center" sx={{ ml: 2 }}>
+                      {text}
+                    </Typography>
+                  </Stack>
+                </Grid>
+              ))}
+            </Grid>
+            <Typography variant="h5" sx={{ py: 8 }} textAlign="center">
+              Работа с депрессией, алкоголизмом, игроманией и наркоманией требует специализированной
+              помощи и обычно не решается только психологическим консультированием.
             </Typography>
           </Stack>
         </Grid>
