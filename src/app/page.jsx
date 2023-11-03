@@ -42,7 +42,7 @@ export default function HomePage() {
           <Typography variant="h1" sx={{ mt: 0, textTransform: 'uppercase' }}>
             Роксолана
           </Typography>
-          <Typography variant="h1" sx={{ ml: 21, mt: 2, textTransform: 'uppercase' }}>
+          <Typography variant="h1" sx={{ ml: 21, mt: 0, textTransform: 'uppercase' }}>
             Микитин
           </Typography>
           <Box sx={{
