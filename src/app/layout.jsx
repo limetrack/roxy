@@ -71,6 +71,7 @@ export default function RootLayout(props) {
               backgroundColor: 'transparent',
               boxShadow: 'none',
               px: WIDE_AREA_PARAMS,
+              position: 'absolute',
             }}
           >
             <Toolbar>

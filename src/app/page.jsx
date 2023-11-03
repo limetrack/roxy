@@ -12,9 +12,15 @@ const WIDE_AREA_PARAMS = {
   xl: 40,
 };
 
+const expirience = [
+  { title: 'Клиентов', value: 140 },
+  { title: 'Часов консультирования', value: 3700 },
+  { title: 'Часов обучения', value: 2200 },
+];
+
 export default function HomePage() {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box>
       <Grid
         container
         rowSpacing={0}
@@ -67,6 +73,43 @@ export default function HomePage() {
             </Stack>
           </Box>
         </Grid>
+      </Grid>
+      <Grid
+        container
+        rowSpacing={0}
+        columnSpacing={0}
+        sx={{
+          pt: 10,
+          px: WIDE_AREA_PARAMS,
+          minWidth: '100%',
+          height: '500px',
+          borderBottom: '1px solid #696969',
+        }}
+      >
+        {expirience.map((exp) => (
+          <Grid container key={exp.title} xs={4} justifyContent="center" alignItems="center">
+            <Stack spacing={4} direction="column" justifyContent="center" alignItems="center">
+              <Box sx={{
+                width: '180px',
+                height: '180px',
+                border: '2px solid #696969',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+              >
+                <Typography variant="h3">
+                  {exp.value}
+                  +
+                </Typography>
+              </Box>
+              <Typography variant="h5" textAlign="center">
+                {exp.title}
+              </Typography>
+            </Stack>
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );
