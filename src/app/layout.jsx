@@ -92,7 +92,7 @@ export default function RootLayout(props) {
               </Typography>
               <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
-                  <Button key={item} sx={{ color: 'initial' }}>
+                  <Button key={item} sx={{ color: 'initial', ml: 4 }}>
                     {item}
                   </Button>
                 ))}

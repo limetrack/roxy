@@ -31,17 +31,22 @@ export default function HomePage() {
         }}
       >
         <Grid xs={12}>
-          <Typography variant="h5" sx={{ ml: 0.9, mt: 20, textTransform: 'uppercase' }}>
+          <Typography
+            variant="h5"
+            sx={{
+              ml: 0.9, mt: 20, textTransform: 'uppercase', letterSpacing: '1px',
+            }}
+          >
             Психологические консультации онлайн
           </Typography>
           <Typography variant="h1" sx={{ mt: 0, textTransform: 'uppercase' }}>
             Роксолана
           </Typography>
-          <Typography variant="h1" sx={{ ml: 13, mt: 2, textTransform: 'uppercase' }}>
+          <Typography variant="h1" sx={{ ml: 21, mt: 2, textTransform: 'uppercase' }}>
             Микитин
           </Typography>
           <Box sx={{
-            maxWidth: '560px', backgroundColor: 'transparent', p: 2, mt: 8, borderRadius: '6px', opacity: 0.9,
+            maxWidth: '700px', backgroundColor: 'transparent', p: 2, mt: 8, borderRadius: '6px', opacity: 0.9,
           }}
           >
             <Stack direction="row" justifyContent="center" alignItems="center">
@@ -55,7 +60,7 @@ export default function HomePage() {
                 borderRadius: '50%',
               }}
               />
-              <Typography variant="subtitle1" sx={{ mx: 4 }}>
+              <Typography variant="h6" sx={{ mx: 4 }}>
                 У каждого человека есть свой путь разрушения и путь развития,
                 и я точно знаю, по какому стоит пройти индивидуально лично ТЕБЕ
               </Typography>
