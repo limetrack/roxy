@@ -152,7 +152,7 @@ export default function HomePage() {
               а значит и к счастью таким образом никогда не придет, будет выживать с ощущением тревоги, нереализованности,
               страха и уверенности - что он не в силах изменить свою жизнь.
             </Typography>
-            <Typography variant="h4" textAlign="left">
+            <Typography variant="h4" textAlign="center">
               ЗАВИСИМОСТЕЙ У СЧАСТЛИВЫХ ЛЮДЕЙ НЕ БЫВАЕТ
             </Typography>
             <Typography variant="body1" textAlign="left">
