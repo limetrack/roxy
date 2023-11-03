@@ -256,7 +256,11 @@ export default function HomePage() {
                 </Grid>
               ))}
             </Grid>
-            <Typography variant="h5" sx={{ py: 8 }} textAlign="center">
+            <Typography
+              variant="h5"
+              sx={{ py: 8 }}
+              textAlign="center"
+            >
               Работа с депрессией, алкоголизмом, игроманией и наркоманией требует специализированной
               помощи и обычно не решается только психологическим консультированием.
             </Typography>

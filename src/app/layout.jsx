@@ -44,7 +44,7 @@ export default function RootLayout(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        ROXY
+        PSYCHOLOGIST
       </Typography>
       <Divider />
       <List>
@@ -89,7 +89,7 @@ export default function RootLayout(props) {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', color: 'initial' } }}
               >
-                ROXY
+                PSYCHOLOGIST
               </Typography>
               <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
