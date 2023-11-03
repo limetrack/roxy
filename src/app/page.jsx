@@ -79,7 +79,6 @@ export default function HomePage() {
         rowSpacing={0}
         columnSpacing={0}
         sx={{
-          pt: 10,
           px: WIDE_AREA_PARAMS,
           minWidth: '100%',
           height: '500px',
