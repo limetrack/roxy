@@ -411,6 +411,17 @@ export default function HomePage() {
               <Typography variant="h5" textAlign="left" sx={{ pb: 4 }}>
                 При себе необходимо иметь блокнот и ручку
               </Typography>
+              <Button
+                sx={{ color: 'initial', mt: 2 }}
+                variant="outlined"
+                color="primary"
+                size="large"
+                target="_blank"
+                href="https://t.me/RoksolanaMik"
+                endIcon={<TelegramIcon color="primary" />}
+              >
+                Записаться
+              </Button>
             </Grid>
           </Grid>
         </Grid>
