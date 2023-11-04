@@ -14,15 +14,41 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
+import TelegramIcon from '@mui/icons-material/Telegram';
 import ThemeRegistry from '../components/ThemeRegistry/ThemeRegistry';
 
 const DRAWER_WIDTH = 240;
 
 const navItems = [
-  'С чем я работаю',
-  'Как мы работаем',
-  'Вариант проведения',
-  'Записаться',
+  {
+    title: 'С чем я работаю',
+    props: {
+      href: '#cases',
+    },
+  },
+  {
+    title: 'Как мы работаем',
+    props: {
+      href: '#plan',
+    },
+  },
+  {
+    title: 'Вариант проведения',
+    props: {
+      href: '#variant',
+    },
+  },
+  {
+    title: 'Записаться',
+    props: {
+      variant: 'outlined',
+      color: 'primary',
+      size: 'large',
+      target: '_blank',
+      href: 'https://t.me/RoksolanaMik',
+      endIcon: <TelegramIcon color="primary" />,
+    },
+  },
 ];
 
 const WIDE_AREA_PARAMS = {
@@ -49,9 +75,9 @@ export default function RootLayout(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.title} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.title} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -93,8 +119,12 @@ export default function RootLayout(props) {
               </Typography>
               <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
-                  <Button key={item} sx={{ color: 'initial', ml: 4 }}>
-                    {item}
+                  <Button
+                    key={item.title}
+                    sx={{ color: 'initial', ml: 4 }}
+                    {...item.props}
+                  >
+                    {item.title}
                   </Button>
                 ))}
               </Box>

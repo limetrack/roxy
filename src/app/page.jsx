@@ -1,9 +1,14 @@
 /* eslint-disable max-len */
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
+import IconButton from '@mui/material/IconButton';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import Divider from '@mui/material/Divider';
 
 const WIDE_AREA_PARAMS = {
   xs: 0,
@@ -17,6 +22,12 @@ const expirience = [
   { title: 'Клиентов', value: 140 },
   { title: 'Часов консультирования', value: 3700 },
   { title: 'Часов обучения', value: 2200 },
+];
+
+const plan = [
+  'Вы озвучиваете свою проблему, как давно она существует, и как уже пробовали с ней работать',
+  'Выясняем, какой результат хотите и что надеетесь получить',
+  'Прокладываем к нему индивидуальный, выгодный вам маршрут',
 ];
 
 const BORDER_COLOR = '#696969';
@@ -177,15 +188,28 @@ export default function HomePage() {
             <Typography variant="h4" textAlign="center">
               ЗАВИСИМОСТЕЙ У СЧАСТЛИВЫХ ЛЮДЕЙ НЕ БЫВАЕТ
             </Typography>
-            <Typography variant="body1" textAlign="left">
+            <Typography variant="body1" textAlign="left" sx={{ pb: 4 }}>
               Ключ к счастью, спокойствию и уверенности лежит через знания и понимание себя, что про вас, а где иллюзия.
               Избавляясь от балласта чужих ожиданий, вы выходите на новый уровень отношений с собой и начинаете руководить
               реальностью, а не подчиняться обстоятельствам.
             </Typography>
+
+            <Button
+              sx={{ color: 'initial' }}
+              variant="outlined"
+              color="primary"
+              size="large"
+              target="_blank"
+              href="https://t.me/RoksolanaMik"
+              endIcon={<TelegramIcon color="primary" />}
+            >
+              Записаться
+            </Button>
           </Stack>
         </Grid>
       </Grid>
       <Grid
+        id="cases"
         container
         rowSpacing={0}
         columnSpacing={0}
@@ -265,6 +289,189 @@ export default function HomePage() {
               помощи и обычно не решается только психологическим консультированием.
             </Typography>
           </Stack>
+        </Grid>
+      </Grid>
+      <Grid
+        id="plan"
+        container
+        rowSpacing={0}
+        columnSpacing={0}
+        justifyContent="center"
+        sx={{
+          px: WIDE_AREA_PARAMS,
+          py: 16,
+          minWidth: '100%',
+          // height: '800px',
+          // borderBottom: `1px solid ${BORDER_COLOR}`,
+          // background: 'rgb(238,238,238)',
+          // background: 'linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(221,221,221,0.9150253851540616) 17%, rgba(255,255,255,1) 100%)',
+        }}
+      >
+        <Grid container xs={12} justifyContent="center" alignItems="center">
+          <Typography variant="h1" textAlign="center" sx={{ width: '100%', pr: 24 }}>
+            Ход нашей
+          </Typography>
+          <Typography variant="h1" textAlign="center" sx={{ width: '100%', pl: 24, pb: 12 }}>
+            работы
+          </Typography>
+          <Stack
+            direction="row"
+            alignItems="flex-start"
+            divider={<Divider orientation="vertical" flexItem />}
+          >
+            {plan.map((exp, index) => (
+              <Grid
+                container
+                key={exp.title}
+                xs={4}
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Stack spacing={4} direction="column" justifyContent="center" alignItems="center">
+                  <Box sx={{
+                    width: '100px',
+                    height: '100px',
+                    border: `2px solid ${BORDER_COLOR}`,
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                  >
+                    <Typography variant="h3">
+                      {index + 1}
+                    </Typography>
+                  </Box>
+                  <Typography variant="h5" textAlign="center">
+                    {exp}
+                  </Typography>
+                </Stack>
+              </Grid>
+            ))}
+          </Stack>
+        </Grid>
+      </Grid>
+      <Grid
+        id="variant"
+        container
+        rowSpacing={0}
+        columnSpacing={0}
+        justifyContent="center"
+        sx={{
+          px: WIDE_AREA_PARAMS,
+          py: 16,
+          minWidth: '100%',
+          // height: '800px',
+          // borderBottom: `1px solid ${BORDER_COLOR}`,
+          // background: 'rgb(238,238,238)',
+          background: 'linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(221,221,221,0.9150253851540616) 17%, rgba(255,255,255,1) 100%)',
+        }}
+      >
+        <Grid container xs={12} justifyContent="center" alignItems="center">
+          <Typography variant="h1" textAlign="left" sx={{ width: '100%', pr: 24 }}>
+            Вариант
+          </Typography>
+          <Typography variant="h1" textAlign="left" sx={{ width: '100%', pl: 24, pb: 12 }}>
+            проведения
+          </Typography>
+          <Grid container sx={{ width: '100%' }}>
+            <Grid xs={6}>
+              <Stack direction="row" sx={{ ml: 8, mb: 8 }}>
+                <Typography variant="h5" textAlign="left" sx={{ width: '260px' }}>
+                  1 час
+                </Typography>
+                <Typography variant="h5" textAlign="left">
+                  1600₴
+                </Typography>
+              </Stack>
+              <Stack direction="row" sx={{ ml: 8, mb: 8 }}>
+                <Typography variant="h5" textAlign="left" sx={{ width: '260px' }}>
+                  4 сессии (месяц)
+                </Typography>
+                <Typography variant="h5" textAlign="left">
+                  5000₴
+                </Typography>
+              </Stack>
+              <Stack direction="row" sx={{ ml: 8, mb: 4 }}>
+                <Typography variant="h5" textAlign="left" sx={{ width: '260px' }}>
+                  8 сессий (2 месяца)
+                </Typography>
+                <Typography variant="h5" textAlign="left">
+                  10000₴
+                </Typography>
+              </Stack>
+            </Grid>
+            <Grid xs={6}>
+              <Typography variant="h5" textAlign="left" sx={{ pb: 4 }}>
+                Выбранные вами дата и время бронируются после перевода оплаты на карту monobank
+              </Typography>
+              <Typography variant="h5" textAlign="left" sx={{ pb: 4 }}>
+                Встреча проходит с помощью видео-звонка в Telegram
+              </Typography>
+              <Typography variant="h5" textAlign="left" sx={{ pb: 4 }}>
+                При себе необходимо иметь блокнот и ручку
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid
+        id="plan"
+        container
+        rowSpacing={0}
+        columnSpacing={0}
+        justifyContent="center"
+        sx={{
+          px: WIDE_AREA_PARAMS,
+          minWidth: '100%',
+          // height: '800px',
+          // borderBottom: `1px solid ${BORDER_COLOR}`,
+          // background: 'rgb(238,238,238)',
+          background: 'linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(221,221,221,0.9150253851540616) 17%, rgba(255,255,255,1) 100%)',
+        }}
+      >
+        <Grid
+          container
+          xs={12}
+          justifyContent="center"
+          alignItems="center"
+          sx={{
+            py: 2,
+            borderTop: '1px solid #bebebe',
+          }}
+        >
+          <Grid xs={4}>
+            <Typography variant="h6" textAlign="left">
+              PSYCHOLOGIST
+            </Typography>
+          </Grid>
+          <Grid xs={4}>
+            <Typography variant="h6" textAlign="center">
+              Микитин Роксолана Владимировна
+            </Typography>
+          </Grid>
+          <Grid xs={4}>
+            <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={2}>
+              <IconButton
+                aria-label="telegram"
+                size="large"
+                color="primary"
+                target="_blank"
+                href="https://t.me/RoksolanaMik"
+              >
+                <TelegramIcon fontSize="inherit" />
+              </IconButton>
+              <IconButton
+                aria-label="instagram"
+                size="large"
+                color="error"
+                target="_blank"
+                href="https://instagram.com/roksolana.psychologist"
+              >
+                <InstagramIcon fontSize="inherit" />
+              </IconButton>
+            </Stack>
+          </Grid>
         </Grid>
       </Grid>
     </Box>
