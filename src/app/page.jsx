@@ -11,7 +11,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import Divider from '@mui/material/Divider';
 
 const WIDE_AREA_PARAMS = {
-  xs: 0,
+  xs: 5,
   sm: 5,
   md: 10,
   lg: 20,
@@ -81,10 +81,10 @@ export default function HomePage() {
           >
             Психологические консультации онлайн
           </Typography>
-          <Typography variant="h1" sx={{ mt: 0, textTransform: 'uppercase' }}>
+          <Typography variant={{ xs: 'h3', sm: 'h1' }} sx={{ mt: 0, textTransform: 'uppercase' }}>
             Роксолана
           </Typography>
-          <Typography variant="h1" sx={{ ml: 21, mt: 0, textTransform: 'uppercase' }}>
+          <Typography variant={{ xs: 'h3', sm: 'h1' }} sx={{ ml: 21, mt: 0, textTransform: 'uppercase' }}>
             Микитин
           </Typography>
           <Box sx={{
@@ -117,12 +117,12 @@ export default function HomePage() {
         sx={{
           px: WIDE_AREA_PARAMS,
           minWidth: '100%',
-          height: '500px',
+          py: 16,
           // borderBottom: `1px solid ${BORDER_COLOR}`,
         }}
       >
         {expirience.map((exp) => (
-          <Grid container key={exp.title} xs={4} justifyContent="center" alignItems="center">
+          <Grid container key={exp.title} xs={12} sm={4} justifyContent="center" alignItems="center">
             <Stack spacing={4} direction="column" justifyContent="center" alignItems="center">
               <Box sx={{
                 width: '180px',
@@ -153,13 +153,14 @@ export default function HomePage() {
         sx={{
           px: WIDE_AREA_PARAMS,
           minWidth: '100%',
-          height: '800px',
+          // height: '800px',
+          py: 16,
           // borderBottom: `1px solid ${BORDER_COLOR}`,
           // background: 'rgb(238,238,238)',
           background: 'linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(221,221,221,0.9150253851540616) 17%, rgba(255,255,255,1) 100%)',
         }}
       >
-        <Grid container xs={6} justifyContent="center" alignItems="center">
+        <Grid container xs={12} sm={6} justifyContent="center" alignItems="center">
           <Stack spacing={4} direction="column" justifyContent="center" alignItems="center">
             <Box sx={{
               width: '300px',
@@ -175,7 +176,7 @@ export default function HomePage() {
             />
           </Stack>
         </Grid>
-        <Grid container xs={6} justifyContent="center" alignItems="center">
+        <Grid container xs={12} sm={6} justifyContent="center" alignItems="center">
           <Stack spacing={4} direction="column" justifyContent="center" alignItems="center">
             <Typography variant="h5" textAlign="left">
               Все люди очень разные, как и их ценности, потребности, желания, особенности и нужды.
@@ -218,10 +219,6 @@ export default function HomePage() {
           px: WIDE_AREA_PARAMS,
           py: 16,
           minWidth: '100%',
-          // height: '800px',
-          // borderBottom: `1px solid ${BORDER_COLOR}`,
-          // background: 'rgb(238,238,238)',
-          // background: 'linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(221,221,221,0.9150253851540616) 17%, rgba(255,255,255,1) 100%)',
         }}
       >
         <Grid container xs={12} justifyContent="center" alignItems="center">
@@ -231,7 +228,7 @@ export default function HomePage() {
             </Typography>
             <Grid container rowSpacing={2}>
               {cases.map((text) => (
-                <Grid key={text} xs={6} spacing={8}>
+                <Grid key={text} xs={12} sm={6} spacing={8}>
                   <Stack direction="row">
                     <Typography variant="h6" textAlign="left">
                       •
@@ -268,7 +265,7 @@ export default function HomePage() {
             </Typography>
             <Grid container rowSpacing={2}>
               {negativeCases.map((text) => (
-                <Grid key={text} xs={3} alignItems="center" justifyContent="center">
+                <Grid key={text} xs={6} sm={3} alignItems="center" justifyContent="center">
                   <Stack direction="row" sx={{ mx: 4 }}>
                     {/* <Typography variant="h6" textAlign="left">
                       •
@@ -308,13 +305,14 @@ export default function HomePage() {
         }}
       >
         <Grid container xs={12} justifyContent="center" alignItems="center">
-          <Typography variant="h1" textAlign="center" sx={{ width: '100%', pr: 24 }}>
+          <Typography variant={{ xs: 'h3', sm: 'h1' }} textAlign="center" sx={{ width: '100%', pr: 24 }}>
             Ход нашей
           </Typography>
-          <Typography variant="h1" textAlign="center" sx={{ width: '100%', pl: 24, pb: 12 }}>
+          <Typography variant={{ xs: 'h3', sm: 'h1' }} textAlign="center" sx={{ width: '100%', pl: 24, pb: 12 }}>
             работы
           </Typography>
-          <Stack
+          <Grid
+            container
             direction="row"
             alignItems="flex-start"
             divider={<Divider orientation="vertical" flexItem />}
@@ -323,7 +321,8 @@ export default function HomePage() {
               <Grid
                 container
                 key={exp.title}
-                xs={4}
+                xs={12}
+                sm={4}
                 justifyContent="center"
                 alignItems="center"
               >
@@ -348,7 +347,7 @@ export default function HomePage() {
                 </Stack>
               </Grid>
             ))}
-          </Stack>
+          </Grid>
         </Grid>
       </Grid>
       <Grid
@@ -368,10 +367,10 @@ export default function HomePage() {
         }}
       >
         <Grid container xs={12} justifyContent="center" alignItems="center">
-          <Typography variant="h1" textAlign="left" sx={{ width: '100%', pr: 24 }}>
+          <Typography variant={{ xs: 'h3', sm: 'h1' }} textAlign="left" sx={{ width: '100%', pr: 24 }}>
             Вариант
           </Typography>
-          <Typography variant="h1" textAlign="left" sx={{ width: '100%', pl: 24, pb: 12 }}>
+          <Typography variant={{ xs: 'h3', sm: 'h1' }} textAlign="left" sx={{ width: '100%', pl: 24, pb: 12 }}>
             проведения
           </Typography>
           <Grid container sx={{ width: '100%' }}>
@@ -451,17 +450,50 @@ export default function HomePage() {
             borderTop: '1px solid #bebebe',
           }}
         >
-          <Grid xs={4}>
-            <Typography variant="h6" textAlign="left">
+          <Grid xs={12} sm={4}>
+            <Typography variant="h6" textAlign="left" sx={{ flex: 1, display: { xs: 'none', sm: 'block' } }}>
               PSYCHOLOGIST
             </Typography>
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="flex-start"
+              spacing={2}
+              sx={{ display: { xs: 'flex', sm: 'none' } }}
+            >
+              <Typography variant="h6" textAlign="left" sx={{ flex: 1 }}>
+                PSYCHOLOGIST
+              </Typography>
+              <IconButton
+                aria-label="telegram"
+                size="large"
+                color="primary"
+                target="_blank"
+                href="https://t.me/RoksolanaMik"
+              >
+                <TelegramIcon fontSize="inherit" />
+              </IconButton>
+              <IconButton
+                aria-label="instagram"
+                size="large"
+                color="error"
+                target="_blank"
+                href="https://instagram.com/roksolana.psychologist"
+              >
+                <InstagramIcon fontSize="inherit" />
+              </IconButton>
+            </Stack>
           </Grid>
-          <Grid xs={4}>
-            <Typography variant="h6" textAlign="center">
+          <Grid xs={12} sm={4}>
+            <Typography variant="h6" textAlign={{ xs: 'left', sm: 'center' }}>
               Микитин Роксолана Владимировна
             </Typography>
           </Grid>
-          <Grid xs={4}>
+          <Grid
+            xs={12}
+            sm={4}
+            sx={{ display: { xs: 'none', sm: 'block' } }}
+          >
             <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={2}>
               <IconButton
                 aria-label="telegram"

@@ -85,8 +85,6 @@ export default function RootLayout(props) {
     </Box>
   );
 
-  const container = typeof window !== 'undefined' ? () => window.document.body : undefined;
-
   return (
     <html lang="en">
       <body>
@@ -101,22 +99,22 @@ export default function RootLayout(props) {
             }}
           >
             <Toolbar>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-                sx={{ mr: 2, display: { sm: 'none' } }}
-              >
-                <MenuIcon />
-              </IconButton>
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', color: 'initial' } }}
+                sx={{ flexGrow: 1, display: { color: 'initial' } }}
               >
                 PSYCHOLOGIST
               </Typography>
+              <IconButton
+                color="initial"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ display: { sm: 'none' } }}
+              >
+                <MenuIcon />
+              </IconButton>
               <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
                   <Button
@@ -130,28 +128,27 @@ export default function RootLayout(props) {
               </Box>
             </Toolbar>
           </AppBar>
-          <nav>
-            <Drawer
-              anchor="right"
-              container={container}
-              variant="temporary"
-              open={mobileOpen}
-              onClose={handleDrawerToggle}
-              ModalProps={{
-                keepMounted: true, // Better open performance on mobile.
-              }}
-              sx={{
-                display: { xs: 'block', sm: 'none' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: DRAWER_WIDTH },
-              }}
-            >
-              {drawer}
-            </Drawer>
-          </nav>
+          <Drawer
+            anchor="right"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: 'block', sm: 'none' },
+              '& .MuiDrawer-paper': {
+                boxSizing: 'border-box',
+                width: DRAWER_WIDTH,
+              },
+            }}
+          >
+            {drawer}
+          </Drawer>
           <Box
             component="main"
             sx={{
-              flexGrow: 1,
+              // flexGrow: 1,
               bgcolor: 'background.default',
               // mt: ['48px', '56px', '64px'],
               // p: 3,
