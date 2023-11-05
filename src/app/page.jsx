@@ -81,12 +81,22 @@ export default function HomePage() {
           >
             Психологические консультации онлайн
           </Typography>
-          <Typography variant={{ xs: 'h3', sm: 'h1' }} sx={{ mt: 0, textTransform: 'uppercase' }}>
-            Роксолана
-          </Typography>
-          <Typography variant={{ xs: 'h3', sm: 'h1' }} sx={{ ml: 21, mt: 0, textTransform: 'uppercase' }}>
-            Микитин
-          </Typography>
+          <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+            <Typography variant="h3" sx={{ mt: 0, textTransform: 'uppercase' }}>
+              Роксолана
+            </Typography>
+            <Typography variant="h3" sx={{ ml: 16, mt: 0, textTransform: 'uppercase' }}>
+              Микитин
+            </Typography>
+          </Box>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <Typography variant="h1" sx={{ mt: 0, textTransform: 'uppercase' }}>
+              Роксолана
+            </Typography>
+            <Typography variant="h1" sx={{ ml: 21, mt: 0, textTransform: 'uppercase' }}>
+              Микитин
+            </Typography>
+          </Box>
           <Box sx={{
             maxWidth: '700px', backgroundColor: 'transparent', p: 2, mt: 8, borderRadius: '6px', opacity: 0.9,
           }}
@@ -305,12 +315,22 @@ export default function HomePage() {
         }}
       >
         <Grid container xs={12} justifyContent="center" alignItems="center">
-          <Typography variant={{ xs: 'h3', sm: 'h1' }} textAlign="center" sx={{ width: '100%', pr: 24 }}>
-            Ход нашей
-          </Typography>
-          <Typography variant={{ xs: 'h3', sm: 'h1' }} textAlign="center" sx={{ width: '100%', pl: 24, pb: 12 }}>
-            работы
-          </Typography>
+          <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+            <Typography variant="h3" textAlign="center" sx={{ width: '100%', pr: 24 }}>
+              Ход нашей
+            </Typography>
+            <Typography variant="h3" textAlign="center" sx={{ width: '100%', pl: 24, pb: 12 }}>
+              работы
+            </Typography>
+          </Box>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <Typography variant="h1" textAlign="center" sx={{ width: '100%', pr: 24 }}>
+              Ход нашей
+            </Typography>
+            <Typography variant="h1" textAlign="center" sx={{ width: '100%', pl: 24, pb: 12 }}>
+              работы
+            </Typography>
+          </Box>
           <Grid
             container
             direction="row"
@@ -367,12 +387,22 @@ export default function HomePage() {
         }}
       >
         <Grid container xs={12} justifyContent="center" alignItems="center">
-          <Typography variant={{ xs: 'h3', sm: 'h1' }} textAlign="left" sx={{ width: '100%', pr: 24 }}>
-            Вариант
-          </Typography>
-          <Typography variant={{ xs: 'h3', sm: 'h1' }} textAlign="left" sx={{ width: '100%', pl: 24, pb: 12 }}>
-            проведения
-          </Typography>
+          <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+            <Typography variant="h3" textAlign="left" sx={{ width: '100%', pr: 24 }}>
+              Вариант
+            </Typography>
+            <Typography variant="h3" textAlign="left" sx={{ width: '100%', pl: 24, pb: 12 }}>
+              проведения
+            </Typography>
+          </Box>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <Typography variant="h1" textAlign="left" sx={{ width: '100%', pr: 24 }}>
+              Вариант
+            </Typography>
+            <Typography variant="h1" textAlign="left" sx={{ width: '100%', pl: 24, pb: 12 }}>
+              проведения
+            </Typography>
+          </Box>
           <Grid container sx={{ width: '100%' }}>
             <Grid xs={6}>
               <Stack direction="row" sx={{ ml: 8, mb: 8 }}>
