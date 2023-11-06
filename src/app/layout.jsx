@@ -12,7 +12,6 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import ThemeRegistry from '../components/ThemeRegistry/ThemeRegistry';
