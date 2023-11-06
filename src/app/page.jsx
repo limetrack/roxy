@@ -11,7 +11,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import Divider from '@mui/material/Divider';
 
 const WIDE_AREA_PARAMS = {
-  xs: 5,
+  xs: 3,
   sm: 5,
   md: 10,
   lg: 20,
@@ -62,12 +62,12 @@ export default function HomePage() {
         rowSpacing={0}
         columnSpacing={0}
         sx={{
-          pt: 10,
+          pt: { xs: 0, sm: 10 },
           px: WIDE_AREA_PARAMS,
           minWidth: '100%',
           height: '100vh',
           backgroundImage: 'url(/IMG_4891.JPG)',
-          backgroundPosition: 'right',
+          backgroundPosition: { xs: 'right -120px center', sm: 'right' },
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
         }}
@@ -76,16 +76,20 @@ export default function HomePage() {
           <Typography
             variant="h5"
             sx={{
-              ml: 0.9, mt: 20, textTransform: 'uppercase', letterSpacing: '1px',
+              ml: { xs: 0.2, sm: 0.9 },
+              mt: { xs: 10, sm: 20 },
+              textTransform: 'uppercase',
+              letterSpacing: '1px',
+              width: { xs: 60, sm: '100%' },
             }}
           >
             Психологические консультации онлайн
           </Typography>
           <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
-            <Typography variant="h3" sx={{ mt: 0, textTransform: 'uppercase' }}>
+            <Typography variant="h4" sx={{ mt: 8, textTransform: 'uppercase' }}>
               Роксолана
             </Typography>
-            <Typography variant="h3" sx={{ ml: 16, mt: 0, textTransform: 'uppercase' }}>
+            <Typography variant="h4" sx={{ ml: 5, mt: 0, textTransform: 'uppercase' }}>
               Микитин
             </Typography>
           </Box>
@@ -97,27 +101,60 @@ export default function HomePage() {
               Микитин
             </Typography>
           </Box>
-          <Box sx={{
-            maxWidth: '700px', backgroundColor: 'transparent', p: 2, mt: 8, borderRadius: '6px', opacity: 0.9,
-          }}
+          <Stack
+            direction="column"
+            justifyContent="flex-end"
+            sx={{
+              height: { xs: '45%', sm: 'auto' },
+            }}
           >
-            <Stack direction="row" justifyContent="center" alignItems="center">
-              <Box sx={{
-                minWidth: '100px',
-                height: '100px',
-                backgroundImage: 'url(/IMG_5497.JPG)',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                borderRadius: '50%',
-              }}
-              />
-              <Typography variant="h6" sx={{ mx: 4 }}>
-                У каждого человека есть свой путь разрушения и путь развития,
-                и я точно знаю, по какому стоит пройти индивидуально лично ТЕБЕ
-              </Typography>
-            </Stack>
-          </Box>
+            <Box sx={{
+              maxWidth: '700px',
+              backgroundColor: { xs: 'white', sm: 'transparent' },
+              p: 2,
+              mt: { xs: 10, sm: 8 },
+              borderRadius: '6px',
+              opacity: { xs: 0.9, sm: 1 },
+            }}
+            >
+              <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+                <Stack direction="row" justifyContent="center" alignItems="center">
+                  <Box sx={{
+                    minWidth: '100px',
+                    height: '100px',
+                    backgroundImage: 'url(/IMG_5497.JPG)',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    borderRadius: '50%',
+                  }}
+                  />
+                  <Typography variant="subtitle1" sx={{ ml: 2 }} align="left">
+                    У каждого человека есть свой путь разрушения и путь развития,
+                    и я точно знаю, по какому стоит пройти индивидуально лично ТЕБЕ
+                  </Typography>
+                </Stack>
+              </Box>
+              <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                <Stack direction="row" justifyContent="center" alignItems="center">
+                  <Box sx={{
+                    minWidth: '100px',
+                    height: '100px',
+                    backgroundImage: 'url(/IMG_5497.JPG)',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    borderRadius: '50%',
+                  }}
+                  />
+                  <Typography variant="h6" sx={{ mx: 4 }}>
+                    У каждого человека есть свой путь разрушения и путь развития,
+                    и я точно знаю, по какому стоит пройти индивидуально лично ТЕБЕ
+                  </Typography>
+                </Stack>
+              </Box>
+            </Box>
+          </Stack>
         </Grid>
       </Grid>
       <Grid
@@ -127,12 +164,23 @@ export default function HomePage() {
         sx={{
           px: WIDE_AREA_PARAMS,
           minWidth: '100%',
-          py: 16,
+          pt: 16,
+          pb: { xs: 8, sm: 16 },
           // borderBottom: `1px solid ${BORDER_COLOR}`,
         }}
       >
         {expirience.map((exp) => (
-          <Grid container key={exp.title} xs={12} sm={4} justifyContent="center" alignItems="center">
+          <Grid
+            container
+            key={exp.title}
+            xs={12}
+            sm={4}
+            justifyContent="center"
+            alignItems="center"
+            sx={{
+              mb: { xs: 8, sm: 0 },
+            }}
+          >
             <Stack spacing={4} direction="column" justifyContent="center" alignItems="center">
               <Box sx={{
                 width: '180px',
@@ -236,7 +284,7 @@ export default function HomePage() {
             <Typography variant="h2" textAlign="center" sx={{ width: '100%', pb: 4 }}>
               С чем я работаю
             </Typography>
-            <Grid container rowSpacing={2}>
+            <Grid container rowSpacing={2} columnSpacing={4}>
               {cases.map((text) => (
                 <Grid key={text} xs={12} sm={6} spacing={8}>
                   <Stack direction="row">
@@ -306,7 +354,8 @@ export default function HomePage() {
         justifyContent="center"
         sx={{
           px: WIDE_AREA_PARAMS,
-          py: 16,
+          pt: 16,
+          pb: { xs: 8, sm: 16 },
           minWidth: '100%',
           // height: '800px',
           // borderBottom: `1px solid ${BORDER_COLOR}`,
@@ -314,12 +363,12 @@ export default function HomePage() {
           // background: 'linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(221,221,221,0.9150253851540616) 17%, rgba(255,255,255,1) 100%)',
         }}
       >
-        <Grid container xs={12} justifyContent="center" alignItems="center">
+        <Grid container xs={12} justifyContent="center" alignItems="center" columnSpacing={4}>
           <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
-            <Typography variant="h3" textAlign="center" sx={{ width: '100%', pr: 24 }}>
+            <Typography variant="h3" textAlign="center" sx={{ width: '100%', pr: 0 }}>
               Ход нашей
             </Typography>
-            <Typography variant="h3" textAlign="center" sx={{ width: '100%', pl: 24, pb: 12 }}>
+            <Typography variant="h3" textAlign="center" sx={{ width: '100%', pl: 16, pb: 12 }}>
               работы
             </Typography>
           </Box>
@@ -345,6 +394,9 @@ export default function HomePage() {
                 sm={4}
                 justifyContent="center"
                 alignItems="center"
+                sx={{
+                  mb: { xs: 8, sm: 0 },
+                }}
               >
                 <Stack spacing={4} direction="column" justifyContent="center" alignItems="center">
                   <Box sx={{
@@ -380,18 +432,15 @@ export default function HomePage() {
           px: WIDE_AREA_PARAMS,
           py: 16,
           minWidth: '100%',
-          // height: '800px',
-          // borderBottom: `1px solid ${BORDER_COLOR}`,
-          // background: 'rgb(238,238,238)',
           background: 'linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(221,221,221,0.9150253851540616) 17%, rgba(255,255,255,1) 100%)',
         }}
       >
         <Grid container xs={12} justifyContent="center" alignItems="center">
           <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
-            <Typography variant="h3" textAlign="left" sx={{ width: '100%', pr: 24 }}>
+            <Typography variant="h3" textAlign="left" sx={{ ml: 0 }}>
               Вариант
             </Typography>
-            <Typography variant="h3" textAlign="left" sx={{ width: '100%', pl: 24, pb: 12 }}>
+            <Typography variant="h3" textAlign="left" sx={{ pl: 8, pb: 12 }}>
               проведения
             </Typography>
           </Box>
@@ -404,8 +453,8 @@ export default function HomePage() {
             </Typography>
           </Box>
           <Grid container sx={{ width: '100%' }}>
-            <Grid xs={6}>
-              <Stack direction="row" sx={{ ml: 8, mb: 8 }}>
+            <Grid xs={12} sm={6}>
+              <Stack direction="row" sx={{ ml: { xs: 4, sm: 8 }, mb: 8 }}>
                 <Typography variant="h5" textAlign="left" sx={{ width: '260px' }}>
                   1 час
                 </Typography>
@@ -413,7 +462,7 @@ export default function HomePage() {
                   1600₴
                 </Typography>
               </Stack>
-              <Stack direction="row" sx={{ ml: 8, mb: 8 }}>
+              <Stack direction="row" sx={{ ml: { xs: 4, sm: 8 }, mb: 8 }}>
                 <Typography variant="h5" textAlign="left" sx={{ width: '260px' }}>
                   4 сессии (месяц)
                 </Typography>
@@ -421,7 +470,7 @@ export default function HomePage() {
                   5000₴
                 </Typography>
               </Stack>
-              <Stack direction="row" sx={{ ml: 8, mb: 4 }}>
+              <Stack direction="row" sx={{ ml: { xs: 4, sm: 8 }, mb: 8 }}>
                 <Typography variant="h5" textAlign="left" sx={{ width: '260px' }}>
                   8 сессий (2 месяца)
                 </Typography>
@@ -430,18 +479,22 @@ export default function HomePage() {
                 </Typography>
               </Stack>
             </Grid>
-            <Grid xs={6}>
-              <Typography variant="h5" textAlign="left" sx={{ pb: 4 }}>
+            <Grid xs={12} sm={6}>
+              <Typography variant="h5" textAlign="left" sx={{ ml: { xs: 4, sm: 0 }, mb: { xs: 4, sm: 4 } }}>
                 Выбранные вами дата и время бронируются после перевода оплаты на карту monobank
               </Typography>
-              <Typography variant="h5" textAlign="left" sx={{ pb: 4 }}>
+              <Typography variant="h5" textAlign="left" sx={{ ml: { xs: 4, sm: 0 }, mb: { xs: 4, sm: 8 } }}>
                 Встреча проходит с помощью видео-звонка в Telegram
               </Typography>
-              <Typography variant="h5" textAlign="left" sx={{ pb: 4 }}>
+              <Typography variant="h5" textAlign="left" sx={{ ml: { xs: 4, sm: 0 }, mb: { xs: 4, sm: 8 } }}>
                 При себе необходимо иметь блокнот и ручку
               </Typography>
               <Button
-                sx={{ color: 'initial', mt: 2 }}
+                sx={{
+                  color: 'initial',
+                  mt: 2,
+                  ml: { xs: 12, sm: 0 },
+                }}
                 variant="outlined"
                 color="primary"
                 size="large"

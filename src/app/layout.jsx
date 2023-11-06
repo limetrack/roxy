@@ -119,7 +119,7 @@ export default function RootLayout(props) {
                 {navItems.map((item) => (
                   <Button
                     key={item.title}
-                    sx={{ color: 'initial', ml: 4 }}
+                    sx={{ color: 'initial', ml: { xs: 2, xl: 4 } }}
                     {...item.props}
                   >
                     {item.title}
