@@ -77,7 +77,13 @@ export default function RootLayout(props) {
         {navItems.map((item) => (
           <ListItem key={item.title} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item.title} />
+              <Button
+                key={item.title}
+                sx={{ color: 'initial', ml: { xs: 2, xl: 4 } }}
+                {...item.props}
+              >
+                {item.title}
+              </Button>
             </ListItemButton>
           </ListItem>
         ))}
