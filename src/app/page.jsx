@@ -137,7 +137,10 @@ export default function HomePage() {
                       І вона може обрати жити своє найкраще життя, правильно вибудувавши свою стратегію.
                     </Typography>
                     <Typography variant="subtitle2" align="left">
-                      Чи готовий ти створити життя своєї мрії?
+                      <strong>Чи готовий ти створити</strong>
+                    </Typography>
+                    <Typography variant="subtitle2" align="left">
+                      <strong>ЖИТТЯ СВОЄЇ МРЇЇ ?</strong>
                     </Typography>
                   </Box>
                 </Stack>
