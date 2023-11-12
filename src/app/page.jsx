@@ -136,7 +136,7 @@ export default function HomePage() {
                     <Typography variant="subtitle2" align="left">
                       І вона може обрати жити своє найкраще життя, правильно вибудувавши свою стратегію.
                     </Typography>
-                    <Typography variant="subtitle1" align="left">
+                    <Typography variant="subtitle2" align="left">
                       Чи готовий ти створити життя своєї мрії?
                     </Typography>
                   </Box>
@@ -159,8 +159,8 @@ export default function HomePage() {
                       Кожна людина має вибір.
                       І вона може обрати жити своє найкраще життя, правильно вибудувавши свою стратегію.
                     </Typography>
-                    <Typography variant="h5">
-                      Чи готовий ти створити життя своєї мрії?
+                    <Typography variant="h6">
+                      <strong>Чи готовий ти створити ЖИТТЯ СВОЄЇ МРЇЇ ?</strong>
                     </Typography>
                   </Box>
                 </Stack>
