@@ -109,7 +109,7 @@ export default function HomePage() {
             }}
           >
             <Box sx={{
-              maxWidth: '700px',
+              maxWidth: '800px',
               backgroundColor: { xs: 'white', sm: 'transparent' },
               p: 2,
               mt: { xs: 10, sm: 8 },
@@ -129,10 +129,17 @@ export default function HomePage() {
                     borderRadius: '50%',
                   }}
                   />
-                  <Typography variant="subtitle1" sx={{ ml: 2 }} align="left">
-                    У каждого человека есть свой путь разрушения и путь развития,
-                    и я точно знаю, по какому стоит пройти индивидуально лично ТЕБЕ
-                  </Typography>
+                  <Box sx={{ ml: 2 }}>
+                    <Typography variant="subtitle2" align="left">
+                      Кожна людина має вибір.
+                    </Typography>
+                    <Typography variant="subtitle2" align="left">
+                      І вона може обрати жити своє найкраще життя, правильно вибудувавши свою стратегію.
+                    </Typography>
+                    <Typography variant="subtitle1" align="left">
+                      Чи готовий ти створити життя своєї мрії?
+                    </Typography>
+                  </Box>
                 </Stack>
               </Box>
               <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -147,10 +154,15 @@ export default function HomePage() {
                     borderRadius: '50%',
                   }}
                   />
-                  <Typography variant="h6" sx={{ mx: 4 }}>
-                    У каждого человека есть свой путь разрушения и путь развития,
-                    и я точно знаю, по какому стоит пройти индивидуально лично ТЕБЕ
-                  </Typography>
+                  <Box sx={{ mx: 4 }}>
+                    <Typography variant="h6">
+                      Кожна людина має вибір.
+                      І вона може обрати жити своє найкраще життя, правильно вибудувавши свою стратегію.
+                    </Typography>
+                    <Typography variant="h5">
+                      Чи готовий ти створити життя своєї мрії?
+                    </Typography>
+                  </Box>
                 </Stack>
               </Box>
             </Box>
