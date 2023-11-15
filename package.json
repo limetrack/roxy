@@ -16,12 +16,13 @@
     "@mui/material": "latest",
     "eslint": "latest",
     "eslint-config-airbnb": "19.0.4",
-    "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-no-inline-styles": "1.0.5",
     "eslint-config-next": "latest",
     "eslint-import-resolver-alias": "1.1.2",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-no-inline-styles": "1.0.5",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-medium-image-zoom": "^5.1.8"
   }
 }

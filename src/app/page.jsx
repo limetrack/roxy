@@ -1,4 +1,7 @@
 /* eslint-disable max-len */
+
+'use client';
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -9,6 +12,8 @@ import IconButton from '@mui/material/IconButton';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Divider from '@mui/material/Divider';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 const WIDE_AREA_PARAMS = {
   xs: 3,
@@ -22,6 +27,13 @@ const expirience = [
   { title: 'Клиентов', value: 140 },
   { title: 'Часов консультирования', value: 3700 },
   { title: 'Часов обучения', value: 2200 },
+];
+
+const DIPLOMAS = [
+  'IMG_3055.JPG',
+  'IMG_3484.PNG',
+  'IMG_7242.JPG',
+  'IMG_7974.JPG',
 ];
 
 const plan = [
@@ -314,6 +326,37 @@ export default function HomePage() {
               ))}
             </Grid>
           </Stack>
+        </Grid>
+        <Grid
+          container
+          xs={12}
+          justifyContent="center"
+          alignItems="center"
+          rowSpacing={2}
+          columnSpacing={2}
+          sx={{
+            pt: 8,
+          }}
+        >
+          {DIPLOMAS.map((diploma) => (
+            <Grid key={diploma} xs={12} sm={3}>
+              <Zoom>
+                <Box
+                  aria-label="That Wanaka Tree, New Zealand by Laura Smetsers"
+                  role="img"
+                  sx={{
+                    width: '100%',
+                    height: { xs: '280px', sm: '180px' },
+                    backgroundImage: `url(/${diploma})`,
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    border: '1px solid #bebebe',
+                  }}
+                />
+              </Zoom>
+            </Grid>
+          ))}
         </Grid>
       </Grid>
       <Grid
