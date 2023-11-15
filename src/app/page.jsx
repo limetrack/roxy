@@ -33,7 +33,7 @@ const DIPLOMAS = [
   'IMG_3055.JPG',
   'IMG_3484.PNG',
   'IMG_7242.JPG',
-  'IMG_7974.JPG',
+  'IMG_7974.jpg',
 ];
 
 const plan = [
